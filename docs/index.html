@@ -257,7 +257,7 @@
         <h2>It starts with a "Hi!" or...</h2>
       </div>
       <div class="contact-grid">
-        <a href="mailto:saboori.eli@gmail.com">saboori.eli@gmail.com</a>
+        <a id="email-link" href="#" aria-label="Email Elham Saboori">Email</a>
         <a href="https://www.linkedin.com/in/elham-saboori-a8327582">LinkedIn</a>
         <a href="https://github.com/e-saboori">GitHub</a>
         <a href="./assets/Elham-Saboori-Resume.pdf">Resume</a>
@@ -266,5 +266,14 @@
         Senior back-end developer, technical lead, AI consultant, and SEO-focused landing page builder based in Toronto.
       </p>
     </footer>
+    <script>
+      const emailLink = document.getElementById("email-link");
+      emailLink.addEventListener("click", (event) => {
+        event.preventDefault();
+        const user = ["saboori", "eli"].join(".");
+        const domain = ["gmail", "com"].join(".");
+        window.location.href = `mailto:${user}@${domain}`;
+      });
+    </script>
   </body>
 </html>
