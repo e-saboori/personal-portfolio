@@ -328,6 +328,10 @@ h3 {
   padding: 96px 48px;
 }
 
+.about > div {
+  padding-left: clamp(24px, 5vw, 88px);
+}
+
 .about .eyebrow,
 .skills .eyebrow {
   color: var(--mint);
@@ -775,6 +779,10 @@ h3 {
     min-height: 420px;
     padding: 72px 20px;
     gap: 32px;
+  }
+
+  .about > div {
+    padding-left: 0;
   }
 
   .about h2,
