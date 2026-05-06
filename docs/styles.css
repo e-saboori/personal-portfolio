@@ -238,6 +238,8 @@ a:focus-visible {
 
 .hero-copy {
   max-width: 720px;
+  justify-self: center;
+  padding-left: clamp(24px, 4vw, 72px);
 }
 
 .eyebrow {
@@ -720,6 +722,11 @@ h3 {
     padding-top: 84px;
     gap: 28px;
     background: var(--paper);
+  }
+
+  .hero-copy {
+    justify-self: start;
+    padding-left: 0;
   }
 
   .hero-art {
