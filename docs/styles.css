@@ -840,7 +840,16 @@ h3 {
   }
 
   .mini-visual {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: auto;
+    height: clamp(210px, 42vw, 260px);
+  }
+
+  .mini-visual img {
+    transform: scale(1.28);
+  }
+
+  .ai-grid article:hover .mini-visual img {
+    transform: scale(1.32);
   }
 
   .skills ul,
