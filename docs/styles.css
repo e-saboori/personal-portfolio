@@ -564,11 +564,24 @@ h3 {
   display: block;
   object-fit: cover;
   object-position: center;
+  transform: scale(1.16);
   transition: transform 300ms ease, opacity 300ms ease;
 }
 
 .ai-grid article:hover .mini-visual img {
-  transform: scale(1.04);
+  transform: scale(1.2);
+}
+
+.ai-grid article:nth-child(1) .mini-visual img {
+  object-position: 46% 54%;
+}
+
+.ai-grid article:nth-child(2) .mini-visual img {
+  object-position: 52% 52%;
+}
+
+.ai-grid article:nth-child(3) .mini-visual img {
+  object-position: 48% 52%;
 }
 
 .ai-grid span {
