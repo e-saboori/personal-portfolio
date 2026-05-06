@@ -260,6 +260,7 @@
         <a id="email-link" href="#" aria-label="Email Elham Saboori">Email</a>
         <a href="https://www.linkedin.com/in/elham-saboori-a8327582">LinkedIn</a>
         <a href="https://github.com/e-saboori">GitHub</a>
+        <a href="https://www.youtube.com/@WhispersOfPersianPoetry">YouTube</a>
         <a href="./assets/Elham-Saboori-Resume.pdf">Resume</a>
       </div>
       <p class="fine-print">
@@ -268,12 +269,9 @@
     </footer>
     <script>
       const emailLink = document.getElementById("email-link");
-      emailLink.addEventListener("click", (event) => {
-        event.preventDefault();
-        const user = ["saboori", "eli"].join(".");
-        const domain = ["gmail", "com"].join(".");
-        window.location.href = `mailto:${user}@${domain}`;
-      });
+      const emailChars = [115, 97, 98, 111, 111, 114, 105, 46, 101, 108, 105, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109];
+      const emailAddress = String.fromCharCode(...emailChars);
+      emailLink.href = `mailto:${emailAddress}`;
     </script>
   </body>
 </html>
