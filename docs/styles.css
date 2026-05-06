@@ -545,7 +545,7 @@ h3 {
 }
 
 .mini-visual {
-  min-height: 160px;
+  aspect-ratio: 4 / 3;
   margin: -26px -26px 6px;
   border-bottom: 2px solid var(--ink);
   overflow: hidden;
@@ -554,9 +554,11 @@ h3 {
 
 .mini-visual img {
   width: 100%;
-  height: 190px;
+  height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
+  background: var(--paper);
   transition: transform 300ms ease, opacity 300ms ease;
 }
 
@@ -808,6 +810,10 @@ h3 {
 
   .ai-grid article {
     min-height: 0;
+  }
+
+  .mini-visual {
+    aspect-ratio: 16 / 10;
   }
 
   .skills ul,
