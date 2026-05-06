@@ -1,12 +1,14 @@
 :root {
   color-scheme: light;
   --ink: #070a12;
-  --paper: #f1e4d2;
-  --pink: #f4b4e6;
-  --yellow: #f2df43;
-  --blue: #cfe9f1;
-  --mint: #19eeb0;
-  --acid: #f7ef4f;
+  --paper: #f4efe6;
+  --pink: #f0c3cf;
+  --yellow: #f4dc5e;
+  --blue: #c8e4ef;
+  --mint: #63d6bd;
+  --acid: #f7e85c;
+  --coral: #ee765f;
+  --violet: #596bcb;
   --soft: #ffffff;
   --muted: #30343d;
   --line: rgba(7, 10, 18, 0.24);
@@ -104,7 +106,7 @@ a:focus-visible {
 }
 
 .hero {
-  min-height: 100dvh;
+  min-height: 92dvh;
   display: grid;
   grid-template-columns: minmax(280px, 0.9fr) minmax(360px, 1fr);
   align-items: center;
@@ -124,7 +126,7 @@ a:focus-visible {
   z-index: 2;
   width: min(100%, 430px);
   border: 2px solid var(--ink);
-  background: #596bcb;
+  background: var(--violet);
   padding: 34px;
   box-shadow: 18px 18px 0 #e8b44f;
   transform: rotate(-4deg);
@@ -248,27 +250,34 @@ h3 {
   content: " ->";
 }
 
-.statement {
+.about {
   min-height: 560px;
   display: grid;
-  place-items: center;
-  padding: 96px 36px;
-  text-align: center;
+  grid-template-columns: 0.95fr 1fr;
+  align-items: end;
+  gap: 72px;
+  padding: 96px 48px;
 }
 
-.statement p,
+.about .eyebrow,
 .skills .eyebrow {
   color: var(--mint);
 }
 
-.statement h2 {
-  max-width: 1000px;
+.about h2 {
+  max-width: 780px;
   color: var(--acid);
-  font-size: 5.5rem;
+  font-size: 4.8rem;
+}
+
+.about > p {
+  max-width: 680px;
+  color: #e9edf2;
+  font-size: 1.25rem;
 }
 
 .work-section,
-.experience {
+.ai-section {
   padding: 72px 48px;
 }
 
@@ -322,6 +331,19 @@ h3 {
     repeating-linear-gradient(90deg, #111827 0 20px, #1d2b7a 20px 40px);
 }
 
+.visual-finance {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0 18%, transparent 18% 34%, rgba(255, 255, 255, 0.15) 34% 49%, transparent 49%),
+    linear-gradient(45deg, #111827, #22645d);
+}
+
+.visual-sim {
+  background:
+    radial-gradient(circle at 22% 28%, var(--acid) 0 10%, transparent 11%),
+    linear-gradient(135deg, rgba(238, 118, 95, 0.92), rgba(89, 107, 203, 0.94)),
+    repeating-linear-gradient(0deg, transparent 0 18px, rgba(255, 255, 255, 0.22) 18px 20px);
+}
+
 .work-copy {
   display: grid;
   gap: 18px;
@@ -334,7 +356,7 @@ h3 {
 }
 
 .work-copy p:not(.meta),
-.timeline p,
+.ai-grid p,
 .system-list p {
   color: var(--muted);
   font-size: 1.05rem;
@@ -381,20 +403,29 @@ h3 {
   border-bottom: 2px solid var(--ink);
 }
 
-.timeline {
+.ai-grid {
   display: grid;
-  border-top: 2px solid var(--ink);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
 }
 
-.timeline article {
+.ai-grid article {
   display: grid;
-  grid-template-columns: 220px 0.7fr 1fr;
-  gap: 32px;
-  padding: 26px 0;
-  border-bottom: 2px solid var(--ink);
+  align-content: start;
+  gap: 18px;
+  min-height: 360px;
+  border: 2px solid var(--ink);
+  padding: 26px;
+  background: rgba(255, 255, 255, 0.38);
 }
 
-.timeline span {
+.ai-grid span {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
   font-weight: 800;
 }
 
@@ -474,12 +505,13 @@ h3 {
     font-size: 3.1rem;
   }
 
-  .statement h2,
+  .about h2,
   .skills h2 {
     font-size: 4rem;
   }
 
   .hero,
+  .about,
   .work-band,
   .contact {
     grid-template-columns: 1fr;
@@ -489,9 +521,8 @@ h3 {
     min-height: 420px;
   }
 
-  .timeline article {
+  .ai-grid {
     grid-template-columns: 1fr;
-    gap: 10px;
   }
 }
 
@@ -506,9 +537,10 @@ h3 {
   }
 
   .hero,
+  .about,
   .work-section,
   .work-band,
-  .experience,
+  .ai-section,
   .skills,
   .contact {
     padding-left: 20px;
@@ -556,12 +588,13 @@ h3 {
     font-size: 1.55rem;
   }
 
-  .statement {
+  .about {
     min-height: 420px;
     padding: 72px 20px;
+    gap: 32px;
   }
 
-  .statement h2,
+  .about h2,
   .skills h2 {
     font-size: 3rem;
   }
